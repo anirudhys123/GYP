@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Pages/Home';
+import { Route, Routes } from 'react-router-dom';
+import AiPage from './Pages/AiPage';
+import Header from './components/Common/Header/Header';
+import PythonFullStackPage from './Pages/PythonFullStackPage';
+import BackendPage from './Pages/BackendPage';
+import FrontendPage from './Pages/FrontendPage';
+import Footer from './components/Common/Footer/Footer';
+import About from './Pages/About';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path="/AiPage" element={<AiPage />} />
+        <Route path="/FrontendPage" element={<FrontendPage />} />
+        <Route path="/BackendPage" element={<BackendPage />} />
+        <Route path="/PythonFullStackPage" element={<PythonFullStackPage />} />
+      </Routes>
+      
+      </>
   );
 }
 

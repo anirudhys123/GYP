@@ -1,0 +1,195 @@
+/* Sticky Menu */
+.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: smoothScroll 0.5s ease-in-out forwards;
+    background: var(--white);
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for sticky effect */
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.is-sticky .navbar .navbar-brand a,
+.is-sticky .navbar .offcanvas-body a {
+    color: var(--black) !important;
+}
+
+.is-sticky .toggle_btn {
+    color: var(--primaryClr) !important;
+    border: 2px solid var(--primaryClr); /* Border for visibility in sticky mode */
+}
+.primaryBtn:hover {
+    cursor: pointer;
+    transform: scale(1.05); /* Optional: Slight scale effect */
+    transition: transform 0.2s ease;
+}
+
+
+/* Header Styling */
+header {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    padding: 16px 0;
+    width: 100%;
+    background-color: rgb(54, 152, 185); /* Initial color */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+header .navbar .navbar-brand a {
+    font-size: 22px;
+    color: var(--white);
+    line-height: 150%;
+    font-family: var(--fontFamily);
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+header .navbar .offcanvas-body a {
+    font-size: var(--bodyText);
+    color: var(--white) !important;
+    line-height: 150%;
+    font-family: var(--fontFamily);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header .navbar .offcanvas-body a:hover {
+    color: var(--primaryClr) !important;
+    transition: color 0.3s ease;
+}
+
+/* Dropdown Menu Styling */
+header .navbar .offcanvas-body .dropdown-menu {
+    min-width: 12rem;
+    background-color: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+  
+
+header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
+    color: var(--primaryClr) !important;
+    padding: 10px 15px;
+    font-weight: 500;
+}
+
+header .navbar .offcanvas-body .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--black) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modal Styling */
+.contact-modal .modal-content {
+    border-radius: 10px; /* Rounded corners for modal */
+    animation: slide-down 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for modal */
+}
+
+.contact-modal .modal-header {
+    border-bottom: none;
+    text-align: center;
+}
+
+.contact-modal .modal-title {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.contact-modal .modal-body {
+    padding: 2rem;
+}
+
+.contact-modal .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.contact-modal .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+
+.contact-modal .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight scale on hover */
+   
+}
+
+/* Slide-Down Animation for Modal */
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 991px) {
+    header .navbar .toggle_btn {
+        font-size: var(--bodyText);
+        color: var(--white);
+        border: 2px solid var(--white);
+        padding: 7px 10px;
+        transition: border-color 0.3s ease;
+    }
+
+    .is-sticky .navbar .toggle_btn {
+        border: 2px solid var(--primaryClr);
+    }
+
+    .offcanvas-header {
+        border-bottom: 1px solid rgb(96, 94, 202);
+        padding-bottom: 8px;
+    }
+
+    .offcanvas-header .logo {
+        font-size: 26px;
+        color: var(--black) !important;
+        font-family: var(--fontFamily);
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .offcanvas-body .nav-link {
+        padding: 12px 0;
+        color: var(--black);
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+
+    .offcanvas-body .dropdown-item {
+        padding: 12px 10px;
+        color: var(--black);
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .offcanvas-body .dropdown-item:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+}

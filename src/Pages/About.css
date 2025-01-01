@@ -1,0 +1,108 @@
+/* General section styling */
+.leadership-section {
+  text-align: center;
+  padding: 4rem 5%;
+  font-family: Arial, sans-serif;
+  background-color: #f7faff; /* Light background color */
+}
+
+/* Section title styling */
+.leadership-section h1 {
+  font-size: 3rem;
+  color: #2b3a67;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Grid container for team members */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Individual team member card styling */
+.team-member {
+  background: linear-gradient(145deg, #e0e8f4, #ffffff);
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  color: #333;
+  max-width: 300px;
+  min-height: 450px; /* Increased height for consistency and clarity */
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Team member photo styling */
+.member-photo {
+  width: 220px; /* Increased width for better clarity */
+  height: 220px; /* Increased height for better clarity */
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Team member name styling */
+.member-name {
+  font-size: 1.6rem; /* Increased font size for better readability */
+  font-weight: 700;
+  color: #2b3a67;
+  margin: 0.5rem 0;
+  text-transform: capitalize;
+}
+
+/* Team member title styling */
+.member-title {
+  font-size: 1.3rem; /* Slightly larger font size */
+  font-weight: bold;
+  color: #64748b;
+  margin-top: 0.3rem;
+  line-height: 1.6; /* Adjusted for clarity */
+}
+
+/* Link styling */
+.team-member-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .leadership-section h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+  }
+
+  .member-photo {
+      width: 180px; /* Larger size for better visibility on mobile */
+      height: 180px;
+  }
+
+  .team-member {
+      padding: 2rem;
+      max-width: 90%;
+      min-height: 420px; /* Adjusted minimum height for smaller screens */
+  }
+
+  .member-name {
+      font-size: 1.4rem; /* Slightly larger font size for clarity on mobile */
+  }
+
+  .member-title {
+      font-size: 1.1rem; /* Increased font size for clarity on mobile */
+  }
+}

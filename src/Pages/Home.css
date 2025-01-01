@@ -1,0 +1,105 @@
+@media (min-width: 375px) and (max-width: 425.99px) {
+  /* .container-fluid {
+    padding: 1.5%;
+  } */
+}
+
+.img-class {
+width: auto;
+}
+
+.container {
+  height: auto;
+  width: 100%;
+}
+
+.type-animation-container {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+padding: 20px;
+}
+
+h1 {
+font-family: 'Helvetica, sans-serif';
+font-size: 2rem; /* Default size for mobile */
+color: #333;
+margin: 0;
+}
+
+/* Mobile View Specific Styling */
+@media (max-width: 767px) {
+  .description {
+    font-size: 0.95rem; /* Slightly smaller font size for compact layout */
+    line-height: 1.4; /* Reduced line height to save space */
+    color: #333;
+    padding: 10px 15px; /* Compact padding */
+    text-align: justify; /* Justified text for cleaner look */
+    background-color: #f0f2f5; /* Light background color for readability */
+    border-radius: 6px; /* Rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for subtle depth */
+    font-family: 'Arial', sans-serif; /* Clear, readable font */
+    margin: 10px 15px; /* Compact margin for mobile */
+    max-width: 100%; /* Ensures it doesn’t exceed screen width */
+  }
+}
+
+
+
+
+.mainbody {
+width: 100%;
+padding: 6rem 0rem 0rem 0rem;
+}
+
+.card {
+height: 100%;
+padding: 1rem;
+cursor: pointer; /* Makes the card clickable */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+.card-des{
+  margin-top: -35px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(128, 92, 92);
+}
+
+.card:hover {
+transform: scale(1.05); /* Slight scale-up effect on hover */
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for hover effect */
+}
+
+.card-body {
+min-height: 150px;
+display: flex;
+flex-direction: column;
+justify-content: space-between; 
+}
+
+.description{
+margin-left: 35px;
+margin-right: 35px;
+font-size: 20px;
+}
+
+/* Desktop-specific Styling */
+@media (min-width: 1024px) {
+  .description {
+    font-size: 1.2rem; /* Slightly larger font size for desktop */
+    line-height: 1.8;
+    margin-top: 1rem;
+  }
+}
+
+/* Mobile-specific Styling */
+@media (max-width: 767px) {
+  .description {
+    font-size: 1rem; /* Adjust font size for mobile */
+    padding: 15px 20px;
+    text-align: left; /* Left-align for better readability on mobile */
+    background: #fff; /* Softer background for mobile */
+  }
+}
